@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fedf2302-6b88-4758-badc-f494c2005790" name="Default Changelist" comment="" />
+    <list default="true" id="fedf2302-6b88-4758-badc-f494c2005790" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/event-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +20,9 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XUMODWHmHA2G7MZPA9i58qAlL6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,8 +31,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rapowo_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rapowo_front" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -58,7 +70,9 @@
       <option name="presentableId" value="Default" />
       <updated>1581096185595</updated>
       <workItem from="1581096187401" duration="14549000" />
-      <workItem from="1581157642920" duration="24189000" />
+      <workItem from="1581157642920" duration="24354000" />
+      <workItem from="1581183754861" duration="394000" />
+      <workItem from="1581184346549" duration="6166000" />
     </task>
     <servers />
   </component>
@@ -79,10 +93,10 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="416" y="121" width="528" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581108376575" />
-    <state x="466" y="130" width="428" height="481" key="FileChooserDialogImpl" timestamp="1581173726117">
+    <state x="466" y="130" width="428" height="481" key="FileChooserDialogImpl" timestamp="1581184349370">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="466" y="130" width="428" height="481" key="FileChooserDialogImpl/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581173726117" />
+    <state x="466" y="130" width="428" height="481" key="FileChooserDialogImpl/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581184349370" />
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1581099606903">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
@@ -91,9 +105,9 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581181920318" />
-    <state x="346" y="63" width="672" height="678" key="search.everywhere.popup" timestamp="1581169166808">
+    <state x="346" y="63" width="672" height="678" key="search.everywhere.popup" timestamp="1581190880600">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="346" y="63" width="672" height="678" key="search.everywhere.popup/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581169166808" />
+    <state x="346" y="63" width="672" height="678" key="search.everywhere.popup/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581190880600" />
   </component>
 </project>
