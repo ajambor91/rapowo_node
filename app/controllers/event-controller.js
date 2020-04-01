@@ -5,13 +5,14 @@ const http =  require('request');
 const EventModel = require('./../models/event');
 const errorModel = require('./../models/error');
 const Error = new errorModel();
-const MAILING_URL = 'http://rapowo-backend.local/mailing';
+const MAILING_URL = 'http://rapowo-backend-local.com/mailing';
 
 module.exports = {
     newTexts(req, res){
         const eventId = req.params.id;
         res.sendStatus(200);
         const Event = new EventModel();
+        console.log(eventId)
         Event.prepareNewTextEvent(eventId).then(result=>{
             http.post({
                 url: `${MAILING_URL}/new-text`,
