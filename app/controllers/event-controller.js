@@ -6,14 +6,20 @@ const EventModel = require('./../models/event');
 const errorModel = require('./../models/error');
 const Error = new errorModel();
 const MAILING_URL = 'http://rapowo-backend-local.com/mailing';
-
+const wsCollection = require('./../helpers/socket-collection');
 module.exports = {
     newTexts(req, res){
         const eventId = req.params.id;
         res.sendStatus(200);
         const Event = new EventModel();
-        console.log(eventId)
         Event.prepareNewTextEvent(eventId).then(result=>{
+            const resultLength = result.length;
+            for(let i = 0; i <= resultLength - 1; i++){
+                const ws = wsCollection.wsCollection.findSocket(wsCollection.wsCollection.collection, result[i].receiver);
+                if(typeof ws !== 'undefined'){
+                    ws.send(JSON.stringify(result[i]))
+                }
+            }
             http.post({
                 url: `${MAILING_URL}/new-text`,
                 json: result
