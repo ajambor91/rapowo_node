@@ -8,7 +8,7 @@ const EventModel = bookshelf.model('Event',{
             return knex
                 .distinct('user.id')
                 .from('event')
-                .select(['event.id as event_id','event.text_id as text', 'text.title', 'author.id as author','author.nick as author_nick', 'user.id as receiver','user.nick as receiver_nick','user.email as email','setting.type'])
+                .select(['event.id as event_id','event.text_id as text', 'text.title','text.slug' ,'author.id as author','author.nick as author_nick', 'user.id as receiver','user.nick as receiver_nick','user.email as email','event.type as event_type'])
                 .innerJoin('text','text.id','event.text_id')
                 .innerJoin('user as author','text.user_id','author.id')
                 .innerJoin('observator','event.user_id','observator.user_id')
