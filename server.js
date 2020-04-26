@@ -19,7 +19,7 @@ wsServer.on('connection', ws => {
         const collLength = socketCollection.wsCollection.collection.length;
         for (let i = 0; i< collLength; i++){
             if(socketCollection.wsCollection.collection[i].userId === JSONMsg.userId){
-                continue;
+                socketCollection.wsCollection.collection.splice(i,1);
             }
             socketCollection.wsCollection.collection.push({userId: JSONMsg.userId, ws: ws});
         }

@@ -4,7 +4,10 @@
     <list default="true" id="fedf2302-6b88-4758-badc-f494c2005790" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/event-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/socket-collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/socket-collection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rapowo_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -92,7 +95,8 @@
       <workItem from="1587631249418" duration="598000" />
       <workItem from="1587716872331" duration="7490000" />
       <workItem from="1587739531187" duration="10420000" />
-      <workItem from="1587801697385" duration="13378000" />
+      <workItem from="1587801697385" duration="14457000" />
+      <workItem from="1587887947028" duration="16262000" />
     </task>
     <servers />
   </component>
@@ -113,10 +117,11 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="403" y="177" width="609" height="387" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581105088819" />
-    <state x="416" y="121" width="528" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581108376575">
+    <state x="416" y="121" width="528" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587907379092">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="416" y="121" width="528" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581108376575" />
+    <state x="416" y="121" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.742@0.0.1366.742" timestamp="1587907379092" />
     <state x="466" y="130" width="428" height="481" key="FileChooserDialogImpl" timestamp="1586012036583">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
@@ -129,10 +134,10 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581181920318" />
-    <state x="345" y="163" key="run.anything.popup" timestamp="1587811386584">
+    <state x="345" y="163" key="run.anything.popup" timestamp="1587913291912">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="345" y="163" key="run.anything.popup/0.0.1366.742@0.0.1366.742" timestamp="1587811386584" />
+    <state x="345" y="163" key="run.anything.popup/0.0.1366.742@0.0.1366.742" timestamp="1587913291912" />
     <state x="346" y="63" width="672" height="678" key="search.everywhere.popup" timestamp="1587729880677">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
