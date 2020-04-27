@@ -13,7 +13,7 @@ module.exports = {
         res.sendStatus(200);
         const Event = new EventModel();
         Event.prepareNewTextEvent(eventId).then(result=>{
-            console.log('dupa')
+            console.log('dupa', result)
             this.sendWs(result, constants.WS_MSG.NEW_FOLLOWED_TEXT);
             this.sendToSymfony('new-text',result, eventId, constants.WS_MSG.NEW_FOLLOWED_TEXT);
         });
@@ -65,7 +65,7 @@ module.exports = {
         resultLength = result.length;
         for(let i = 0; i < wsCollLength; i++){
             for (let j = 0; j < resultLength; j++){
-                if(wsCollection.wsCollection.collection[i].userId === result[j].receiver){
+                if(typeof result[j] !== 'undefined' && wsCollection.wsCollection.collection[i].userId === result[j].receiver){
                     let wsClient = wsCollection.wsCollection.collection[i].ws;
                     wsClient.send(JSON.stringify({status: message,data:result[j]}))
                     if(typeof result[i] !== 'undefined' && result[i].type){

@@ -6,6 +6,9 @@ const constants = {
         NEW_TEXT: 'new-text',
         POPULAR: 'popular-text',
         POPULAR_FOLLOWED: 'popular-followed'
+    },
+    IMAGE_TYPES: {
+        NAVBAR_THUMB: 2
     }
 };
 module.exports = constants;

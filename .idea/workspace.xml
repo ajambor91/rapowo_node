@@ -4,6 +4,8 @@
     <list default="true" id="fedf2302-6b88-4758-badc-f494c2005790" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/event-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <workItem from="1587739531187" duration="10420000" />
       <workItem from="1587801697385" duration="14457000" />
       <workItem from="1587887947028" duration="16262000" />
-      <workItem from="1587974093570" duration="1837000" />
+      <workItem from="1587974093570" duration="5570000" />
     </task>
     <servers />
   </component>
