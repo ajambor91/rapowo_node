@@ -68,7 +68,7 @@ module.exports = {
                 if(wsCollection.wsCollection.collection[i].userId === result[j].receiver){
                     let wsClient = wsCollection.wsCollection.collection[i].ws;
                     wsClient.send(JSON.stringify({status: message,data:result[j]}))
-                    if(!result[i].type){
+                    if(typeof result[i] !== 'undefined' && result[i].type){
                         result.splice(i, 1);
                     }
                 }
