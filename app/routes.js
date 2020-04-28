@@ -16,4 +16,10 @@ router.get('/popular-text/:id', (req, res) => {
 router.get('/popular-followed/:id', (req, res) => {
    eventController.popularFollowed(req, res);
 });
+router.get('/new-comment/:id', (req, res)=> {
+    eventController.newComment(req, res);
+});
+router.get('/reply-comment/:id', (req, res)=>{
+    eventController.getReplyComment(req, res);
+});
 module.exports = router;

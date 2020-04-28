@@ -6,6 +6,8 @@
       <change beforePath="$PROJECT_DIR$/app/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/event-controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +97,7 @@
       <workItem from="1587801697385" duration="14457000" />
       <workItem from="1587887947028" duration="16262000" />
       <workItem from="1587974093570" duration="5570000" />
+      <workItem from="1588059646063" duration="8818000" />
     </task>
     <servers />
   </component>
@@ -132,6 +135,10 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581181920318" />
+    <state x="1690" y="92" width="700" height="530" key="recent.locations.popup" timestamp="1588067655047">
+      <screen x="1360" y="0" width="1366" height="768" />
+    </state>
+    <state x="1690" y="92" width="700" height="530" key="recent.locations.popup/1360.0.1366.768/0.0.1360.741@1360.0.1366.768" timestamp="1588067655047" />
     <state x="345" y="163" key="run.anything.popup" timestamp="1587913291912">
       <screen x="0" y="0" width="1366" height="742" />
     </state>

@@ -13,9 +13,8 @@ module.exports = {
         res.sendStatus(200);
         const Event = new EventModel();
         Event.prepareNewTextEvent(eventId).then(result=>{
-            console.log('dupa', result)
             this.sendWs(result, constants.WS_MSG.NEW_FOLLOWED_TEXT);
-            this.sendToSymfony('new-text',result, eventId, constants.WS_MSG.NEW_FOLLOWED_TEXT);
+            this.sendToSymfony('new-text',result, eventId, constants.SETTINGS.NEW_TEXT_TYPE);
         });
         },
     mostComment(req,res){
@@ -50,6 +49,25 @@ module.exports = {
             this.sendPopularWS(res, constants.WS_MSG.POPULAR_FOLLOWED);
         });
     },
+    newComment(req,res){
+        console.log('in')
+        const eventId = req.params.id;
+        const Event = new EventModel();
+        res.sendStatus(200);
+        Event.getNewComment(eventId).then(res => {
+            this.singleWsSend(res, constants.WS_MSG.NEW_COMMENT);
+            this.sendToSymfony('new-comment',res,constants.SETTINGS.NEW_COMMENT);
+        });
+    },
+    getReplyComment(req, res){
+        const eventId = req.params.id;
+        const Event = new EventModel();
+        res.sendStatus(200);
+        Event.getReplyComments(eventId).then(res => {
+            this.singleWsSend(res, constants.WS_MSG.REPLY_COMMENT);
+            this.sendToSymfony('reply-comment', res, constants.SETTINGS.REPLY_COMMENT);
+        });
+    },
     sendWs(result, message){
         let resultLength = result.length;
         const wsCollLength = wsCollection.wsCollection.collection.length;
@@ -58,7 +76,6 @@ module.exports = {
             for (let j = 0; j<resArr.length; j++){
                 if(typeof resArr[j] !== 'undefined' && typeof result[i] !== 'undefined' && resArr[j].receiver ===  result[i].receiver){
                     result.splice(i, 1);
-                    console.log(result,'res');
                 }
             }
         }
@@ -86,6 +103,16 @@ module.exports = {
                 }
             }
         }
+    },
+    singleWsSend(result, message){
+        console.log(result);
+      const wsCollLength = wsCollection.wsCollection.collection.length;
+      for(let i = 0; i< wsCollLength; i++){
+          if(wsCollection.wsCollection.collection[i].userId === result[0].receiver){
+              let ws = wsCollection.wsCollection.collection[i].ws;
+              ws.send(JSON.stringify({status: message, data: result[0]}));
+          }
+      }
     },
     sendWsToAllLoggedUser(result, message){
         const wsColletcionLength = wsCollection.wsCollection.collection.length;
