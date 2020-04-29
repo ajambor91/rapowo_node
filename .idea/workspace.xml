@@ -4,6 +4,7 @@
     <list default="true" id="fedf2302-6b88-4758-badc-f494c2005790" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/event-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,7 @@
       <workItem from="1587887947028" duration="16262000" />
       <workItem from="1587974093570" duration="5570000" />
       <workItem from="1588059646063" duration="10799000" />
-      <workItem from="1588146959977" duration="598000" />
+      <workItem from="1588146959977" duration="12218000" />
     </task>
     <servers />
   </component>
@@ -128,10 +129,11 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581099606903" />
-    <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581181920318">
-      <screen x="0" y="0" width="1366" height="742" />
+    <state x="1458" y="104" width="1170" height="564" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588187459384">
+      <screen x="1360" y="0" width="1366" height="768" />
     </state>
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581181920318" />
+    <state x="1458" y="104" width="1170" height="564" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1360.0.1366.768/0.0.1360.741@1360.0.1366.768" timestamp="1588187459384" />
     <state x="1690" y="92" width="700" height="530" key="recent.locations.popup" timestamp="1588067655047">
       <screen x="1360" y="0" width="1366" height="768" />
     </state>

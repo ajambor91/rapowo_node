@@ -68,20 +68,14 @@ module.exports = {
         });
     },
     sendWs(result, message){
+
         let resultLength = result.length;
         const wsCollLength = wsCollection.wsCollection.collection.length;
-        let resArr = result;
-        for(let i = 0; i<result.length; i++){
-            for (let j = 0; j<resArr.length; j++){
-                if(typeof resArr[j] !== 'undefined' && typeof result[i] !== 'undefined' && resArr[j].receiver ===  result[i].receiver){
-                    result.splice(i, 1);
-                }
-            }
-        }
+        result = this.getUniqueArray(result);
         resultLength = result.length;
         for(let i = 0; i < wsCollLength; i++){
             for (let j = 0; j < resultLength; j++){
-                if(typeof result[j] !== 'undefined' && wsCollection.wsCollection.collection[i].userId === result[j].receiver){
+                if(typeof result[j] !== 'undefined' && wsCollection.wsCollection.collection[i].userId === result[j].receiver && wsCollection.wsCollection.collection[i].userId !== result[j].author){
                     let wsClient = wsCollection.wsCollection.collection[i].ws;
                     wsClient.send(JSON.stringify({status: message,data:result[j]}))
                     if(typeof result[i] !== 'undefined' && result[i].type){
@@ -96,7 +90,7 @@ module.exports = {
         const resLength = result.length;
         for(let i = 0; i<wsColLength; i++){
             for(let j = 0; j< resLength; j++){
-                if(wsCollection.wsCollection.collection[i].userId === result[j].receiver){
+                if(wsCollection.wsCollection.collection[i].userId === result[j].receiver && result[j].receiver !== result[j].author){
                     let ws = wsCollection.wsCollection.collection[i].ws;
                     ws.send(JSON.stringify({status: message, data: result[j]}))
                 }
@@ -119,14 +113,24 @@ module.exports = {
             ws.send(JSON.stringify({status: message, data: result}))
         }
     },
+    getUniqueArray(arr){
+        return arr.map(item => item.receiver)
+            .map((item, i, final) => final.indexOf(item) === i && i)
+            .filter(item => arr[item])
+            .map(item => arr[item]);
+    },
     sendToSymfony(path, result, eventId, type){
         const resLength = result.length;
         let resArr = [];
         for (let i = 0; i<resLength; i++){
+            if(result[i].receiver === result[i].author){
+                continue;
+            }
             if(result[i].type === type){
                 resArr.push(result[i]);
             }
         }
+        resArr = this.getUniqueArray(resArr);
         http.post({
             url: `${MAILING_URL}/${path}`,
             json: resArr
