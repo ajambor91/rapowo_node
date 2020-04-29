@@ -50,7 +50,6 @@ module.exports = {
         });
     },
     newComment(req,res){
-        console.log('in')
         const eventId = req.params.id;
         const Event = new EventModel();
         res.sendStatus(200);
@@ -105,7 +104,6 @@ module.exports = {
         }
     },
     singleWsSend(result, message){
-        console.log(result);
       const wsCollLength = wsCollection.wsCollection.collection.length;
       for(let i = 0; i< wsCollLength; i++){
           if(wsCollection.wsCollection.collection[i].userId === result[0].receiver){
