@@ -67,15 +67,16 @@ const EventModel = bookshelf.model('Event',{
         },
         getReplyComments(eventId){
             return knex
-                .select(['parent.id as comment_id','event.id as event_id','event.text_id as text', 'text.title','text.slug' ,'author.id as author','author.nick as author_nick', 'user.id as receiver','user.nick as receiver_nick','user.email as email','event.type as event_type','setting.type as type','image.path'])
+                .select(['parent.id as parent_comment_id','image.path as path','event.id as event_id','text.id as text', 'text.title','text.slug' ,'author.id as author','author.nick as author_nick', 'receiver.id as receiver','receiver.nick as receiver_nick','receiver.email as email','event.type as event_type','setting.type as type'])
                 .from('event')
-                .innerJoin('comment as parent','parent.id','event.comment_id')
-                .innerJoin('text', 'text.id','parent.text_id')
-                .innerJoin('user','user.id','parent.user_id')
-                .innerJoin('comment as child','child.id','parent.parent_comment_id')
-                .innerJoin('user as author','author.id','child.user_id')
-                .leftJoin('setting','setting.user_id','user.id')
+                .innerJoin('comment as child','child.id','event.comment_id')
+                .innerJoin('comment as parent', 'child.parent_comment_id','parent.id')
+                .innerJoin('text','parent.text_id','text.id')
+                .innerJoin('user as author','child.user_id','author.id')
+                .innerJoin('user as receiver', 'receiver.id','parent.user_id')
+                .leftJoin('setting','setting.user_id','receiver.id')
                 .leftJoin('image','image.user_id','author.id')
+                .where({'event.id': eventId})
                 .andWhere(function () {
                     this.where({'image.type': constants.IMAGE_TYPES.NAVBAR_THUMB}).orWhere({'image.path':null})
                 })

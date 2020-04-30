@@ -96,6 +96,8 @@
       <workItem from="1587974093570" duration="5570000" />
       <workItem from="1588059646063" duration="10799000" />
       <workItem from="1588146959977" duration="12218000" />
+      <workItem from="1588232814287" duration="597000" />
+      <workItem from="1588248910695" duration="9741000" />
     </task>
     <servers />
   </component>
@@ -129,11 +131,11 @@
       <screen x="0" y="0" width="1366" height="742" />
     </state>
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581099606903" />
-    <state x="1458" y="104" width="1170" height="564" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588187459384">
+    <state x="1458" y="104" width="1170" height="564" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588257332658">
       <screen x="1360" y="0" width="1366" height="768" />
     </state>
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581181920318" />
-    <state x="1458" y="104" width="1170" height="564" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1360.0.1366.768/0.0.1360.741@1360.0.1366.768" timestamp="1588187459384" />
+    <state x="1458" y="104" width="1170" height="564" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1360.0.1366.768/0.0.1360.741@1360.0.1366.768" timestamp="1588257332658" />
     <state x="1690" y="92" width="700" height="530" key="recent.locations.popup" timestamp="1588067655047">
       <screen x="1360" y="0" width="1366" height="768" />
     </state>

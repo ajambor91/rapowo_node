@@ -55,7 +55,7 @@ module.exports = {
         res.sendStatus(200);
         Event.getNewComment(eventId).then(res => {
             this.singleWsSend(res, constants.WS_MSG.NEW_COMMENT);
-            this.sendToSymfony('new-comment',res,constants.SETTINGS.NEW_COMMENT);
+            this.sendToSymfony('new-comment',res,eventId,constants.SETTINGS.NEW_COMMENT);
         });
     },
     getReplyComment(req, res){
@@ -64,7 +64,7 @@ module.exports = {
         res.sendStatus(200);
         Event.getReplyComments(eventId).then(res => {
             this.singleWsSend(res, constants.WS_MSG.REPLY_COMMENT);
-            this.sendToSymfony('reply-comment', res, constants.SETTINGS.REPLY_COMMENT);
+            this.sendToSymfony('reply-comment', res,eventId, constants.SETTINGS.REPLY_COMMENT);
         });
     },
     sendWs(result, message){
@@ -120,17 +120,23 @@ module.exports = {
             .map(item => arr[item]);
     },
     sendToSymfony(path, result, eventId, type){
+        console.log(result)
+
         const resLength = result.length;
         let resArr = [];
         for (let i = 0; i<resLength; i++){
-            if(result[i].receiver === result[i].author){
+            if((type !== constants.SETTINGS.REPLY_COMMENT || type !== constants.SETTINGS.NEW_COMMENT ) &&
+                result[i].receiver === result[i].author){
+                console.log('in')
                 continue;
             }
             if(result[i].type === type){
                 resArr.push(result[i]);
             }
         }
+
         resArr = this.getUniqueArray(resArr);
+        console.log(resArr)
         http.post({
             url: `${MAILING_URL}/${path}`,
             json: resArr
