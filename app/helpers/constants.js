@@ -3,6 +3,7 @@ const constants = {
     SETTINGS:{
       NEW_TEXT_TYPE: 1,
       NEW_COMMENT: 6,
+        NEW_FOLLOWED_TEXT: 4,
       REPLY_COMMENT: 7
     },
     WS_MSG: {

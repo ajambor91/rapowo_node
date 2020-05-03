@@ -20,13 +20,8 @@ wsServer.on('connection', ws => {
             return;
         }
         const collLength = socketCollection.wsCollection.collection.length;
-        for (let i = 0; i< collLength; i++){
-            socketCollection.wsCollection.collection.push({userId: JSONMsg.userId, ws: ws});
-        }
-        if(collLength === 0){
-            socketCollection.wsCollection.collection.push({userId: JSONMsg.userId, ws: ws});
-        }
-    })
+        socketCollection.wsCollection.collection.push({userId: JSONMsg.userId, ws: ws});
+    });
     ws.on('message',msg => {
         const JSONmsg = JSON.parse(msg);
         if(JSONmsg.type === 'init'){

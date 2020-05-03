@@ -12,7 +12,7 @@ const EventModel = bookshelf.model('Event',{
                 .innerJoin('user as author','text.user_id','author.id')
                 .innerJoin('observator','event.user_id','observator.user_id')
                 .innerJoin('user','observator.observator_id','user.id')
-                .innerJoin('setting','setting.user_id','author.id')
+                .leftJoin('setting','setting.user_id','author.id')
                 .leftJoin('image','image.user_id','author.id')
                 .where({'event.id': eventId})
                 .andWhere( function () {
@@ -26,7 +26,7 @@ const EventModel = bookshelf.model('Event',{
             return knex
                 .distinct('event.id')
                 .from('event')
-                .select(['event.id as event_id', 'event.text_id as text_id', 'text.title', 'text.slug', 'user.id as author', 'user.nick as author', 'event.type as event_type'])
+                .select(['image.path as path', 'event.id as event_id', 'event.text_id as text_id', 'text.title', 'text.slug', 'user.id as author', 'user.nick as author_nick', 'event.type as event_type'])
                 .innerJoin('text', 'text.id', 'event.text_id')
                 .innerJoin('user', 'user.id', 'text.user_id')
                 .leftJoin('image', 'image.user_id', 'user.id')
@@ -38,13 +38,13 @@ const EventModel = bookshelf.model('Event',{
         getPopularFollowedText(eventId){
             return knex
                 .distinct('text.id')
-                .select(['event.id as event_id','event.text_id as text', 'text.title','text.slug' ,'author.id as author','author.nick as author_nick', 'user.id as receiver','user.nick as receiver_nick','user.email as email','event.type as event_type'])
+                .select(['image.path as path','event.id as event_id','event.text_id as text', 'text.title','text.slug' ,'author.id as author','author.nick as author_nick', 'user.id as receiver','user.nick as receiver_nick','user.email as email','event.type as event_type'])
                 .from('event')
                 .innerJoin('text','text.id','event.text_id')
                 .innerJoin('user as author','text.user_id','author.id')
-                .innerJoin('observator','author.id','text.user_id')
+                .innerJoin('observator','author.id','observator.user_id')
                 .innerJoin('user','user.id','observator.observator_id')
-                .leftJoin('image','image.user_id','user.id')
+                .leftJoin('image','image.user_id','author.id')
                 .where({'event.id': eventId})
                 .andWhere(function () {
                     this.where({'image.type': constants.IMAGE_TYPES.NAVBAR_THUMB}).orWhere({'image.path':null})

@@ -13,6 +13,7 @@ module.exports = {
         res.sendStatus(200);
         const Event = new EventModel();
         Event.prepareNewTextEvent(eventId).then(result=>{
+            console.log(result,'du[pa')
             this.sendWs(result, constants.WS_MSG.NEW_FOLLOWED_TEXT);
             this.sendToSymfony('new-text',result, eventId, constants.SETTINGS.NEW_TEXT_TYPE);
         });
@@ -22,6 +23,7 @@ module.exports = {
         const Event = new EventModel();
         res.sendStatus(200);
         Event.getGenericEvent(eventId).then( res => {
+            console.log(res);
             this.sendWsToAllLoggedUser(res[0], constants.WS_MSG.MOST_COMMENT);
         });
     },
@@ -38,6 +40,7 @@ module.exports = {
         const Event = new EventModel();
         res.sendStatus(200);
         Event.getGenericEvent(eventId).then( res => {
+            console.log(res);
             this.sendWsToAllLoggedUser(res[0], constants.WS_MSG.POPULAR);
         });
     },
@@ -46,6 +49,7 @@ module.exports = {
         const Event = new EventModel();
         res.sendStatus(200);
         Event.getPopularFollowedText(eventId).then(res => {
+            console.log(res)
             this.sendPopularWS(res, constants.WS_MSG.POPULAR_FOLLOWED);
         });
     },
@@ -100,7 +104,7 @@ module.exports = {
     singleWsSend(result, message){
       const wsCollLength = wsCollection.wsCollection.collection.length;
       for(let i = 0; i< wsCollLength; i++){
-          if(wsCollection.wsCollection.collection[i].userId === result[0].receiver){
+          if(wsCollection.wsCollection.collection[i].userId === result[0].receiver && wsCollection.wsCollection.collection[i].userId !== result[0].author){
               let ws = wsCollection.wsCollection.collection[i].ws;
               ws.send(JSON.stringify({status: message, data: result[0]}));
           }
