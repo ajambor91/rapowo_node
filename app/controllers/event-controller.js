@@ -13,7 +13,6 @@ module.exports = {
         res.sendStatus(200);
         const Event = new EventModel();
         Event.prepareNewTextEvent(eventId).then(result=>{
-            console.log(result,'du[pa')
             this.sendWs(result, constants.WS_MSG.NEW_FOLLOWED_TEXT);
             this.sendToSymfony('new-text',result, eventId, constants.SETTINGS.NEW_TEXT_TYPE);
         });
@@ -23,7 +22,6 @@ module.exports = {
         const Event = new EventModel();
         res.sendStatus(200);
         Event.getGenericEvent(eventId).then( res => {
-            console.log(res);
             this.sendWsToAllLoggedUser(res[0], constants.WS_MSG.MOST_COMMENT);
         });
     },
@@ -40,7 +38,6 @@ module.exports = {
         const Event = new EventModel();
         res.sendStatus(200);
         Event.getGenericEvent(eventId).then( res => {
-            console.log(res);
             this.sendWsToAllLoggedUser(res[0], constants.WS_MSG.POPULAR);
         });
     },
@@ -49,7 +46,6 @@ module.exports = {
         const Event = new EventModel();
         res.sendStatus(200);
         Event.getPopularFollowedText(eventId).then(res => {
-            console.log(res)
             this.sendPopularWS(res, constants.WS_MSG.POPULAR_FOLLOWED);
         });
     },
@@ -124,14 +120,12 @@ module.exports = {
             .map(item => arr[item]);
     },
     sendToSymfony(path, result, eventId, type){
-        console.log(result)
 
         const resLength = result.length;
         let resArr = [];
         for (let i = 0; i<resLength; i++){
             if((type !== constants.SETTINGS.REPLY_COMMENT || type !== constants.SETTINGS.NEW_COMMENT ) &&
                 result[i].receiver === result[i].author){
-                console.log('in')
                 continue;
             }
             if(result[i].type === type){
@@ -140,7 +134,6 @@ module.exports = {
         }
 
         resArr = this.getUniqueArray(resArr);
-        console.log(resArr)
         http.post({
             url: `${MAILING_URL}/${path}`,
             json: resArr

@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fedf2302-6b88-4758-badc-f494c2005790" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/event-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rapowo_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -102,6 +98,7 @@
       <workItem from="1588248910695" duration="9741000" />
       <workItem from="1588330639634" duration="3904000" />
       <workItem from="1588421074453" duration="5015000" />
+      <workItem from="1588500737729" duration="1206000" />
     </task>
     <servers />
   </component>
@@ -127,11 +124,11 @@
     </state>
     <state x="416" y="121" width="528" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1581108376575" />
     <state x="416" y="121" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.742@0.0.1366.742" timestamp="1587907379092" />
-    <state x="1826" y="135" width="428" height="481" key="FileChooserDialogImpl" timestamp="1588330670302">
+    <state x="1826" y="135" width="428" height="481" key="FileChooserDialogImpl" timestamp="1588860279557">
       <screen x="1360" y="0" width="1366" height="768" />
     </state>
     <state x="466" y="130" width="428" height="481" key="FileChooserDialogImpl/0.0.1366.742/1366.0.1360.768@0.0.1366.742" timestamp="1586012036583" />
-    <state x="1826" y="135" key="FileChooserDialogImpl/1360.0.1366.768/0.0.1360.741@1360.0.1366.768" timestamp="1588330670302" />
+    <state x="1826" y="135" width="428" height="481" key="FileChooserDialogImpl/1360.0.1366.768/0.0.1360.741@1360.0.1366.768" timestamp="1588860279557" />
     <state x="98" y="100" width="1170" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1581099606903">
       <screen x="0" y="0" width="1366" height="742" />
     </state>
